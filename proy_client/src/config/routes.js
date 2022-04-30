@@ -1,8 +1,9 @@
 import LayoutAdmin from "../layouts/LayoutAdmin";
-import LayoutError404 from "../layouts/Layout404";
+import Layout404Error from "../layouts/Layout404Error";
 import AdminHome from "../pages/Admin";
 import AdminSignIn from "../pages/Admin/signIn";
 import Error404 from "../pages/Error404";
+
 const routes = [
   {
     path: "/admin",
@@ -16,7 +17,7 @@ const routes = [
   },
   {
     path: "*",
-    layout: LayoutError404,
+    layout: Layout404Error,
     component: Error404,
   },
 ];
