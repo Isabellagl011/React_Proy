@@ -1,7 +1,7 @@
 import React from "react";
 import { Layout } from "antd";
 
-export default function LayoutError404(props) {
+export default function Layout404Error(props) {
   const { children } = props;
   return (
     <Layout>
