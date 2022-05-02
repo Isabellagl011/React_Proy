@@ -5,7 +5,7 @@ Content-Type: application/application/json
 {
   "name": "Isabella",
   "lastname": "Grajales",
-  "email": "isabella.grajalesl@autonoma.edu.co",
+  "email": "isabella.grajalesl@edu.co",
   "password": "hola123",
   "active": true
 }
