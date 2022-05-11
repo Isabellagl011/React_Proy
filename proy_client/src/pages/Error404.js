@@ -1,12 +1,9 @@
 import React from "react";
 
-const Error404 = () => {
+export default function Error404() {
   return (
     <div>
-      <h1>Error 404</h1>
-      <p>Not Found</p>
+      <h1>NotFound page</h1>
     </div>
   );
-};
-
-export default Error404;
+}

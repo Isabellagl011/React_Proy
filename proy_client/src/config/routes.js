@@ -1,10 +1,14 @@
-import LayoutAdmin from "../layouts/LayoutAdmin";
-import Layout404Error from "../layouts/Layout404Error";
-import AdminHome from "../pages/Admin";
-import AdminSignIn from "../pages/Admin/signIn";
-import Error404 from "../pages/Error404";
+import LayoutAdmin from "../layouts/LayoutAdmin"
+import LayoutBasic from "../layouts/LayoutBasic";
+/**Importamos los pages */
 
-const routes = [
+import AdminHome from "../pages/Admin";
+import AdminSignIn from "../pages/Admin/SignIn";
+import Home from "../pages/Home";
+import Error404 from "../pages/Error404";
+import Contact from "../pages/Contact";
+
+const routesAdmin = [
   {
     path: "/admin",
     layout: LayoutAdmin,
@@ -15,11 +19,30 @@ const routes = [
     layout: LayoutAdmin,
     component: AdminSignIn,
   },
+];
+
+/** Ruta home , notFound */
+
+const routesClient = [
   {
-    path: "*",
-    layout: Layout404Error,
-    component: Error404,
+    path: "/",
+    layout: LayoutBasic,
+    component: Home,
+  },
+
+  {
+    path: "/contact",
+    layout: LayoutBasic,
+    component: Contact,
   },
 ];
 
+const routeNotFound = [
+  {
+    path: "*",
+    layout: LayoutBasic,
+    component: Error404,
+  },
+];
+const routes = [...routesAdmin, ...routesClient, ...routeNotFound];
 export default routes;
