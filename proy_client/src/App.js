@@ -1,29 +1,25 @@
 import React from "react";
-import { BrowserRouter as Router, Route, Link, Routes } from "react-router-dom";
-import routes from "./config/routes";
-import Error404 from "./pages/Error404";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import miroutes from "./config/routes";
+import "./App.scss";
 
-function App() {
+export default function App() {
   return (
-    <Router>
+    <BrowserRouter>
       <Routes>
-        {routes.map((route, index) => (
+        {miroutes.map((route, index) => (
           <Route
             key={index}
             path={route.path}
             element={
               <route.layout>
-                <route.component>
-                  <h1>Error 404</h1>
-                  <p>Not Found</p>
-                </route.component>
-                <h2>Child component</h2>
+                <route.component />
               </route.layout>
             }
           />
         ))}
       </Routes>
-    </Router>
+    </BrowserRouter>
   );
 }
 /*<BrowserRouter>
@@ -57,5 +53,3 @@ function Users() {
 function NotFound() {
   return <h2> Component not found!</h2>;
 }*/
-
-export default App;
