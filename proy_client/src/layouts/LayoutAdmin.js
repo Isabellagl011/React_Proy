@@ -38,7 +38,11 @@ export default function LayoutAdmin(props) {
         </Header>
         <Content className='layout-admin__content'>{children}</Content>
         <Footer className='layout-admin__footer'>
-          <GithubOutlined style={{ fontSize: "17px" }} />
+          <GithubOutlined style={{ fontSize: "20px" }} />{" "}
+          <a href='https://github.com/Isabellagl011/React_Proy/tree/main/proy_client'>
+            {" "}
+            Isabella Grajales{" "}
+          </a>
         </Footer>
       </Layout>
     </Layout>

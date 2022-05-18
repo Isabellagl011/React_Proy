@@ -1,9 +1,11 @@
 import React, { useState } from "react";
 import { Form, Input, Button, Checkbox } from "antd";
-import { UserOutlined } from "@ant-design/icons";
+import { UserOutlined, LockOutlined, MailOutlined } from "@ant-design/icons";
 import "./Register.scss";
 export default function Register() {
   const [inputs, setInputs] = useState({
+    person_name: "",
+    lastname: "",
     email: "",
     password: "",
     repeatPassword: "",
@@ -28,6 +30,26 @@ export default function Register() {
       <Form.Item>
         <Input
           prefix={<UserOutlined />}
+          type='name'
+          name='name'
+          placeholder='Nombre'
+          className='register-form__input'
+          value={inputs.name}
+        />
+      </Form.Item>
+      <Form.Item>
+        <Input
+          prefix={<UserOutlined />}
+          type='lastname'
+          name='lastnmae'
+          placeholder='Apellido'
+          className='register-form__input'
+          value={inputs.lastname}
+        />
+      </Form.Item>
+      <Form.Item>
+        <Input
+          prefix={<MailOutlined />}
           type='email'
           name='email'
           placeholder='Correo electronico'
@@ -37,7 +59,7 @@ export default function Register() {
       </Form.Item>
       <Form.Item>
         <Input
-          prefix={<UserOutlined />}
+          prefix={<LockOutlined />}
           type='password'
           name='password'
           placeholder='Contraseña'
@@ -47,7 +69,7 @@ export default function Register() {
       </Form.Item>
       <Form.Item>
         <Input
-          prefix={<UserOutlined />}
+          prefix={<LockOutlined />}
           type='password'
           name='repeatPassword'
           placeholder='Repetir contraseña'
